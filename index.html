@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — KONGO Johan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Playfair+Display:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo">KJ <span class="accent">●</span></span>
+    <div class="nav-links">
+      <a href="#hero">Accueil</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- 1. HERO -->
+  <section id="hero">
+    <div class="bg"></div>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <p class="label">Portfolio</p>
+      <h1>KONGO<br><span>Johan</span></h1>
+      <p class="subtitle">Data Scientist · Actuariat · Finance</p>
+      <a href="#about" class="scroll-btn">↓</a>
+    </div>
+  </section>
+
+  <!-- 2. ABOUT -->
+  <section id="about">
+    <div class="about-fullscreen">
+      <div class="about-left">
+        <p class="section-tag">// about_me</p>
+        <h2>ABOUT</h2>
+        <p class="about-email">kongojohan24@gmail.com</p>
+        <p class="about-bio">
+          Qui suis-je ?
+
+Je m’appelle KONGO Johan, j’ai 21 ans et je suis étudiant en Licence Sciences du Management et de la Décision au CESAG. Mais derrière ce titre un peu sérieux, se cache un passionné de mathématiques, d’informatique et de logique.
+
+Mon rêve ? Devenir Data Actuary. Pas seulement pour le titre, mais parce que j’adore résoudre des problèmes complexes avec des données. Je suis ce genre de personne qui ne lâche pas un exercice tant qu’il n’a pas trouvé la solution élégante. La curiosité est mon moteur : chaque nouvelle techno, chaque défi mathématique est une excuse pour apprendre et créer.
+
+Ce que vous trouverez ici
+
+Chaque projet que je poste raconte une histoire : un problème bien défini, une exploration des données, un modèle construit de zéro, et surtout une vraie réflexion logique. Que ce soit un algorithme d’optimisation, une analyse de données réelles ou un petit outil pratique, je met un point d’honneur à expliquer simplement des choses complexes.
+
+Pourquoi me suivre ?
+
+Parce que je crois que la data science et l’actuariat ne sont pas réservés à une élite : ce sont des jeux d’énigmes. Et j’aime partager mes découvertes. Si vous aimez les chiffres qui racontent une histoire, les lignes de code qui résolvent un vrai problème, ou simplement voir comment un étudiant construit son chemin vers un métier passion, vous êtes au bon endroit.
+
+Envie de collaborer ou d’échanger ?
+
+Je suis toujours partant pour un nouveau défi ou une discussion autour des maths, de la data, ou des meilleures méthodes pour ne pas dormir la veille d’un rendu de projet. Contactez-moi
+        </p>
+        <div class="about-info">
+          <div class="info-item"><span class="key">Formation</span><span class="val">Licence SDM — CESAG</span></div>
+          <div class="info-item"><span class="key">Localisation</span><span class="val">Dakar, Sénégal 🇸🇳</span></div>
+          <div class="info-item"><span class="key">Origine</span><span class="val">Burkina Faso 🇧🇫</span></div>
+          <div class="info-item"><span class="key">Statut</span><span class="val accent">Étudiant ●</span></div>
+        </div>
+      </div>
+      <div class="about-right-photo">
+        <img src="photo.jpeg" alt="KONGO Johan">
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PROJETS -->
+  <section id="projects">
+    <div class="projects-netflix">
+      <div class="netflix-header">
+        <p class="section-tag">// projects</p>
+        <h2>Projets</h2>
+      </div>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn left" onclick="scrollCarousel(-1)">‹</button>
+        <div class="carousel" id="carousel">
+
+          <div class="proj-card" onclick="openModal(0)">
+            <div class="proj-img" style="background-image: url('projet1.jpeg')">
+              <div class="proj-num">1</div>
+              <div class="proj-overlay">
+                <h3>Tarification Sinistre Auto</h3>
+                <div class="proj-tags-small">
+                  <span>Actuariat</span><span>Python</span><span>GLM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card" onclick="openModal(1)">
+            <div class="proj-img" style="background-image: url('projet2.jpg')">
+              <div class="proj-num">2</div>
+              <div class="proj-overlay">
+                <h3>Score Risque Crédit</h3>
+                <div class="proj-tags-small">
+                  <span>ML</span><span>Python</span><span>Credit Risk</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card proj-add">
+            <div class="proj-img proj-img-empty">
+              <span>+ Ajouter<br>un projet</span>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-btn right" onclick="scrollCarousel(1)">›</button>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-img" id="modal-img"></div>
+        <div class="modal-body">
+          <h3 id="modal-title"></h3>
+          <p id="modal-desc"></p>
+          <div class="modal-tags" id="modal-tags"></div>
+          <button id="rapport-btn" class="rapport-btn" style="display:none">
+  📄 Voir le rapport complet
+</button>
+          <div class="comments-section">
+            <h4>Commentaires</h4>
+            <div class="comments-list" id="modal-comments"></div>
+            <div class="comment-form">
+              <input type="text" id="modal-name" placeholder="Ton prénom">
+              <textarea id="modal-text" placeholder="Ton commentaire..."></textarea>
+              <button onclick="addModalComment()">Envoyer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="section-tag">// +226 65 27 29 84</p>
+      <h2>Contact</h2>
+      <p class="contact-intro">Tu veux échanger ou collaborer ? Écris-moi.</p>
+      <div class="contact-links">
+        <a href="mailto:kongojohan24@gmail.com" class="contact-btn">✉ kongojohan24@gmail.com</a>
+        <a href="https://linkedin.com/in/kongo-johan" target="_blank" class="contact-btn">in LinkedIn Johan Kongo</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- FENÊTRE RAPPORT -->
+  <div class="rapport-overlay" id="rapport-overlay">
+    <div class="rapport-box">
+      <div class="rapport-bar">
+        <span id="rapport-title"></span>
+        <button onclick="closeRapport()">✕ Fermer</button>
+      </div>
+      <iframe id="rapport-frame" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

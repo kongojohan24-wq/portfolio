@@ -8,12 +8,12 @@ const projects = [
     rapport: "rapport_sinistres_auto.html"
   },
   {
-    title: "Score Risque Crédit",
-    desc: "Construction d'un score de crédit pour prédire la probabilité de défaut d'un emprunteur.",
-    tags: ["Machine Learning", "Python", "Credit Risk", "XGBoost"],
-    img: "projet2.jpg",
-    rapport: null
-  }
+  title: "Analyse Économique Afrique de l'Ouest",
+  desc: "Analyse économique et développement humain en Afrique de l'Ouest : exploration des indicateurs socio-économiques, modélisation statistique et visualisation des données régionales.",
+  tags: ["R", "Analyse de données", "Économie", "Développement Humain", "Data Visualization"],
+  img: "projet_afrique.jpg",
+  rapport: "rapport_economie_afrique_ouest.html"
+},
 ];
 
 // CARROUSEL
